@@ -9,6 +9,11 @@ print("This script will set up your minecraft server")
 print("It will set up ufw (firewall), ssh for the current user, autologin, any dependencies and install the server")
 print("\n")
 
+if input("HAVE YOU FILLED OUT THE CONFIG (y/n)") != 'y':
+    quit()
+if input("DOUBLE CONFIRM, type fully (yes/no)") != 'yes':
+    quit()
+
 from modules import depends
 from modules import ufw
 from modules import getty
