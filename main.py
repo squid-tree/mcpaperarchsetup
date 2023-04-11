@@ -1,9 +1,16 @@
-# Setup Firewall
-
+# Setup ufw
+    # Enable ports 25565 and 22
 # Setup Ssh with {user} 
-
-# Install Dependencies
-
 # Set Getty Up
-
+# Install Dependencies
 # Install server 
+print("Welcome")
+print("This script will set up your minecraft server")
+print("It will set up ufw (firewall), ssh for the current user, autologin, any dependencies and install the server")
+print("\n")
+
+import depends from modules
+import ufwsetup from modules
+import getty from modules
+import installer from modules 
+import saveinstall from modules

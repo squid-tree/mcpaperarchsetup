@@ -1,5 +1,5 @@
-from scripts import projectmodules
-from scripts.config import *
+from modules.scripts import projectmodules
+from modules.scripts.config import *
 
 if not projectmodules.confirminput("Are you sure you want to uninstall the server?"):
     print("Quitting")

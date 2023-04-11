@@ -1,7 +1,7 @@
 import os 
 import subprocess
-from scripts import projectmodules
-from scripts.config import *
+from modules.scripts import projectmodules
+from modules.scripts.config import *
 
 print("Installing ...")
 print("Please ensure all configs have been filled")
