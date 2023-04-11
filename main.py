@@ -12,5 +12,6 @@ print("\n")
 import depends from modules
 import ufwsetup from modules
 import getty from modules
+import sshsetup from modules
 import installer from modules 
 import saveinstall from modules
