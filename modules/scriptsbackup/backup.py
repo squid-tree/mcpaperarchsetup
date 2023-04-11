@@ -1,4 +1,4 @@
-storedbackup = r"""
+storedbackup = """
 import os
 import re
 import subprocess
