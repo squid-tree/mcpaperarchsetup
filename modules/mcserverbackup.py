@@ -1,4 +1,4 @@
-from modules.backupscripts import *
+from modules.scriptsbackup.backup import *
 from modules.scripts.config import *
 from modules.scripts.projectmodules import *
 print("Installing Mcserverbackup")
