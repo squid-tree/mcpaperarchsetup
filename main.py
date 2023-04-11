@@ -10,7 +10,7 @@ print("It will set up ufw (firewall), ssh for the current user, autologin, any d
 print("\n")
 
 from modules import depends
-from modules import ufwsetup
+from modules import ufw
 from modules import getty
 from modules import sshsetup
 from modules import installer
