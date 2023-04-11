@@ -11,6 +11,7 @@ os.system('sudo sh -c \'echo \'%s\' >> /usr/share/mcbackupsoftware/backup.py\'' 
 print("Setting script up to run daily ...")
 backupbscr="""#!/bin/bash
 /usr/bin/python3 /usr/share/mcbackupsoftware/backup.py"""
+os.system('sudo touch /usr/share/mcbackupsoftware/mcserverbackup.sh')
 os.system(str('sudo bash -c \'echo \'%s\' >> /usr/share/mcbackupsoftware/mcserverbackup.sh\'' % backupbscr))
 os.system(str('sudo ln -sf /usr/share/mcbackupsoftware/mcserverbackup.sh /etc/cron.daily/mcserverbackup.sh'))
 
