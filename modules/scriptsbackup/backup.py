@@ -1,4 +1,4 @@
-storedbackup = r"""
+storedbackup = '''
 import os
 import re
 import subprocess
@@ -36,4 +36,4 @@ if len(blacklist) >= 1:
         os.system(str('sudo rm -r %s\'%s\'' % (backupspath, i)))
 
 os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
-"""
+'''
