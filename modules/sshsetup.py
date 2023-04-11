@@ -1,3 +1,3 @@
 import os 
 print("Enabling Ssh")
-os.system("systemctl enable sshd --now")
+os.system("sudo systemctl enable sshd --now")
