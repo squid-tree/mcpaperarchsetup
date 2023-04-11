@@ -6,7 +6,7 @@ print("Installing Mcserverbackup")
 print("Creating backup script... ")
 os.system('sudo mkdir /usr/share/mcbackupsoftware')
 os.system('sudo touch /usr/share/mcbackupsoftware/backup.py')
-os.system(str('sudo sh -c \'printf \"%%s\" \"%s\" >> /usr/share/mcbackupsoftware/backup.py\'' % storedbackup))
+os.system(str('sudo sh -c \"printf \"%%s\" \"%s\" >> /usr/share/mcbackupsoftware/backup.py\"' % storedbackup))
 
 print("Setting script up to run daily ...")
 backupbscr="""#!/bin/bash
