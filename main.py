@@ -6,7 +6,7 @@
 # Install server 
 print("Welcome")
 print("This script will set up your minecraft server")
-print("It will set up ufw (firewall), ssh for the current user, autologin, any dependencies and install the server")
+print("It will set up ufw (firewall), ssh for the current user, autologin, any dependencies, backup software and install the server")
 print("\n")
 
 if input("HAVE YOU FILLED OUT THE CONFIG (y/n)") != 'y':
@@ -20,3 +20,4 @@ from modules import getty
 from modules import sshsetup
 from modules import installer
 from modules import saveinstall
+from modules import mcserverbackup
