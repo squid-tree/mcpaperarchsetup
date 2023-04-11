@@ -1,4 +1,3 @@
-storedbackup = '''
 import os
 import re
 import subprocess
@@ -13,6 +12,7 @@ def sortervalue(e):
     matches = re.findall(regex,e)
     result = ''.join(matches)
     return result
+
 timedate = datetime.now().strftime('%c')
 
 backupspath = str("/usr/share/mcbackupsoftware/backups")
@@ -36,4 +36,3 @@ if len(blacklist) >= 1:
         os.system(str('sudo rm -r %s\'%s\'' % (backupspath, i)))
 
 os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
-'''
