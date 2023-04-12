@@ -7,7 +7,7 @@ if os.geteuid() == 0:
     quit()
 
 print("UNINSTALLER \n")
-if not confirminput("Would you like to continue?"):
+if not projectmodules.confirminput("Would you like to continue?"):
     print("Quiting program ...")
     quit()
 
