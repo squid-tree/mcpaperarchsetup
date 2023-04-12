@@ -72,7 +72,8 @@ else:
 
 if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
     if projectmodules.confirminput('Make wget directory?'):
-        os.system(str('mkdir --parents %s/mcserver/paperdirectory' % homedirectory))
+        os.system('print %s' % homedirectory)
+        os.system(str('mkdir -p %s/mcserver/paperdirectory' % homedirectory))
         os.system("ls /home/rosa | grep mc")
     else:
         quit()
