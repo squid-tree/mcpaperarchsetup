@@ -1,6 +1,6 @@
 import getpass
 import modules.scripts.projectmodules
-userc = getpass.getuser().list().copy()
+userc = list(getpass.getuser())).copy()
 user = ''.join(userc)
 
 x=input("Installing or uninstalling? (i/u)")
