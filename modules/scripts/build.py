@@ -103,6 +103,11 @@ if projectmodules.confirminput("Install the startmc service?"):
     os.system('sudo chgrp -R minecraft /opt/minecraft/mcserver')
     os.system('sudo chgrp -R minecraft /opt/minecraft/mcserver/paperdirectory')
     os.system('sudo chgrp -R minecraft /opt/minecraft/mcserver/paperdirectory/\'%s\'' % jarversion)
+    
+    os.system('sudo chmod -R g+rwx /opt/minecraft')
+    os.system('sudo chmod -R g+rwx /opt/minecraft/mcserver')
+    os.system('sudo chmod -R g+rwx /opt/minecraft/mcserver/paperdirectory')
+    os.system('sudo chmod -R g+rwx /opt/minecraft/mcserver/paperdirectory/\'%s\'' % jarversion)
     print("Giving java access ...")
     os.system('sudo usermod -a -G minecraft jvmapps')
 else:
