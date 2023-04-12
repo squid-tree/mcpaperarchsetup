@@ -10,9 +10,9 @@ del os
 
 x=input("Installing or uninstalling? (i/u)")
 if x == "i":
-    execfile(str('%s/superinstaller.py' % scrdirectory))
+    import superinstaller
 elif x == "u":
-    execfile(str('%s/uninstaller.py' % scrdirectory))
+    import uninstaller
 else:
     print("Invalid option")
     quit()
