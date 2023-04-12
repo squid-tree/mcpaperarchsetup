@@ -25,7 +25,7 @@ NoNewPrivileges=true
 
 WorkingDirectory=/opt/minecraft/mcserver
 
-ExecStart=java -Xmx%sG -Xms%sG -jar paperdirectory/%s nogui
+ExecStart=java -Xmx%sG -Xms%sG -jar /opt/minecraft/mcserver/paperdirectory/%s nogui
 
 [Install]
 
