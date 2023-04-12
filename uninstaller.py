@@ -6,15 +6,12 @@ if os.geteuid() == 0:
     print("ERROR: Cannot be run as root")
     quit()
 
+homedircopy = homedirectory
+
 print("UNINSTALLER \n")
 if not projectmodules.confirminput("Would you like to continue?"):
     print("Quiting program ...")
     quit()
-
-homedircopy = homedirectory
-
-
-print("homedircopy", homedircopy)
 
 # mcserverbackup
 print("Uninstalling backup software and saving backups in home")
