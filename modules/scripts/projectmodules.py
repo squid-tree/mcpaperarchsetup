@@ -45,13 +45,16 @@ def confirminput(s):
 
 def cleanupbuild():
     print("Cleaning Build:")
-    os.system('sudo killall -u minecraft')
-    os.system('sudo userdel -r minecraft')
     os.system('rm -r %s/mcserver' % homedirectory)
     print("Build was cleaned succesfully")
     quit()
 
 def cleanupinstall():
+    print("Removing users and user settings related ...")
+    os.system('sudo killall -u minecraft')
+    os.system('sudo userdel -r minecraft')
+    os.system('sudo usermod -r -G minecraft jvmapps')
+    os.system('sudo groupdel minecraft')
     print("Uninstalling server from it's directory")
     os.system('sudo rm -rf /opt/minecraft/mcserver')
     print("Removing startmc service")
