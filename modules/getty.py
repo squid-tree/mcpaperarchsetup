@@ -16,7 +16,7 @@ with open(ttydir, 'r') as file:
     
 temp_object = open(tempdir, "a")
 temp_object.write(str(copytty))
-temp_object.write(str(" %s" % user)
+temp_object.write(str(" %s" % user))
 temp_object.write(str(r" %I $TERM"))
 temp_object.close()
 
