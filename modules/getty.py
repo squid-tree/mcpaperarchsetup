@@ -12,7 +12,7 @@ os.system(str("touch %s" % tempdir))
 
 # Taking of tty.txt and writing to temp
 with open(ttydir, 'r') as file:
-    copytty = file.read()
+    copytty = file.read().strip()
     
 temp_object = open(tempdir, "a")
 temp_object.write(str(copytty))
