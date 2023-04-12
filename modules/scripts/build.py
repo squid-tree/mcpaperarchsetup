@@ -61,8 +61,10 @@ if not projectmodules.confirminput("This is now the building stage, where the fi
 
 if projectmodules.confirminput("Create a new user named minecraft?"):
     print("Adding user: minecraft")
-    os.system('sudo useradd -r -m -U -d /opt/minecraft -s /bin/bash minecraft')
-    os.system('sudo chown -R minecraft:minecraft /opt/minecraft')
+    os.system('sudo groupadd minecraft')
+    os.system('sudo useradd -r -m -U -d /opt/minecraft -s /bin/bash -g minecraft minecraft')
+    os.system('sudo chgrp -R minecraft /opt/minecraft')
+    os.system('sudo chmod -R g+rwx /opt/minecraft')
 else:
     projectmodules.cleanupbuild()
 
