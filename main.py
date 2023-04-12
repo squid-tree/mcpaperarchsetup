@@ -4,9 +4,9 @@ userc = getpass.getuser().list().copy()
 user = ''.join(userc)
 
 x=input("Installing or uninstalling? (i/u)")
-if x = "i"
+if x == "i"
     import superinstaller
-elif x = "u"
+elif x == "u"
     import uninstaller
 else:
     print("Invalid option")
