@@ -8,7 +8,7 @@ os.system("rm %s/scriptsbackup/temp.txt")
 os.system("touch %s/scriptsbackup/temp.txt")
 
 ttydir=str("%s/scriptsbackup/tty.txt" % pwd)
-tempdir=str("%s/scriptsbackup/temp/txt" % pwd)
+tempdir=str("%s/scriptsbackup/temp.txt" % pwd)
 
 # Taking of tty.txt and writing to temp
 with open(ttydir, 'r') as file:
