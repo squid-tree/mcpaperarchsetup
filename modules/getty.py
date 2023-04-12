@@ -4,11 +4,11 @@ import os
 pwd = ''.join(list(os.path.realpath(os.path.dirname(__file__))).copy()).strip()
 
 #creation of temp
-os.system("rm %s/scriptsbackup/temp.txt")
-os.system("touch %s/scriptsbackup/temp.txt")
-
 ttydir=str("%s/scriptsbackup/tty.txt" % pwd)
 tempdir=str("%s/scriptsbackup/temp.txt" % pwd)
+
+os.system(str("rm %s" % tempdir)
+os.system(str("touch %s" % tempdir)
 
 # Taking of tty.txt and writing to temp
 with open(ttydir, 'r') as file:
