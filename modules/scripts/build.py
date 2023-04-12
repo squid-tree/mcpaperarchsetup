@@ -63,10 +63,9 @@ if projectmodules.confirminput("Create a new user named minecraft?"):
     print("Adding user: minecraft")
     os.system('sudo groupadd minecraft')
     os.system('sudo useradd -r -m -d /opt/minecraft -s /bin/bash -g minecraft minecraft')
-    os.system('sudo chgrp -R minecraft /opt/minecraft')
-    os.system('sudo chmod -R g+rwx /opt/minecraft')
 else:
     projectmodules.cleanupbuild()
+    projectmodules.cleanupinstall()
 
 #if projectmodules.confirminput("Clone the git repo in home?"):
 #    os.system('git clone %s %s' % (ghserverurl, str('%s/mcserver' % homedirectory)))
@@ -82,21 +81,24 @@ if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
     print("Link was wgeted")
 else:
     projectmodules.cleanupbuild()
+    projectmodules.cleanupinstall()
 
 print("\n")
 print("------Installation------")    
 if not projectmodules.confirminput("This is now the installation stage, where the server will be installed into the system. Continue?"):
     projectmodules.cleanupbuild()
+    projectmodules.cleanupinstall()
 
 if projectmodules.confirminput("Install mcserver to it's directory?"):
     print("Installing mcserver ...")
     projectmodules.os.system(str('sudo cp -r %s/mcserver /opt/minecraft/' % homedirectory))
 else:
     projectmodules.cleanupbuild()
+    projectmodules.cleanupinstall()
 
 if projectmodules.confirminput("Install the startmc service?"):
     os.system('sudo touch /etc/systemd/system/startmc.service')
-    os.system('sudo sh -c \'echo \"%s\" >> /etc/systemd/system/startmc.service\'' % mcserviceconfig)
+    os.system('sudo sh -c \'echo \"%s\" >> /etc/systemd/system/startmc.service\'' % mcserviceconfig) 
     print("Enabling groups access ...")
     os.system('sudo chgrp -R minecraft /opt/minecraft/mcserver')
     print("Giving java acess ..."
