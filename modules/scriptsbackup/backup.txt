@@ -16,7 +16,7 @@ def sortervalue(e):
 timedate = datetime.now().strftime('%c')
 
 backupspath = str("/usr/share/mcbackupsoftware/backups")
-newbackuppath = str("%s%s" % (backupspath, timedate)) 
+newbackuppath = str("%s/\'%s\'" % (backupspath, timedate)) 
 
 blacklist = list()
 
@@ -35,4 +35,4 @@ if len(blacklist) >= 1:
     for i in blacklist:
         os.system(str('sudo rm -r %s\'%s\'' % (backupspath, i)))
 
-os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
+os.system("sudo cp -r /opt/minecraft/ %s" % newbackupspath)
