@@ -20,6 +20,6 @@ os.system(str('sudo mkdir -p /etc/systemd/system/getty@tty.service.d'))
 
 print("Installing getty script")
 
-os.system(str('sudo bash -c \"printf \"%s\" > %s/penis.txt\"' % (configstring, str('/etc/systemd/system/getty@tty1.service.d/autologin.conf'))))
+os.system(str('sudo bash -c \"printf \"%s\" > %s"' % (configstring, str('/etc/systemd/system/getty@tty1.service.d/autologin.conf'))))
 
 print("Getty login has been setup")
