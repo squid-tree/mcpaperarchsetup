@@ -1,25 +1,31 @@
 from modules.scripts.config import *
 import os
 
-def literaljoiner(l):
-    string=str()
-    for i in range(len(l)):
-        string += r'{}'.format(str("%s" % l[i]).replace('\n', '\\n'))
+pwd = ''.join(list(os.path.realpath(os.path.dirname(__file__))).copy()).snip()
 
-print("Setting up getty autologin")
+#creation of temp
+os.system("rm %s/scriptsbackup/temp.txt")
+os.system("touch %s/scriptsbackup/temp.txt")
 
+ttydir=str("%s/scriptsbackup/tty.txt" % pwd)
+tempdir=str("%s/scriptsbackup/temp/txt" % pwd)
 
-configstring=list([r"[Service]", "\n", r"ExecStart=", "\n", r"ExecStart=-/sbin/agetty -o '-p -f -- ", r"\\\\\\\\u", r"' ", r"--noclear --autologin ", r'{}'.format(str("%s" % user)), " %%I \$TERM"])
-
-
-configstring = literaljoiner(configstring)
+# Taking of tty.txt and writing to temp
+with open(ttydir, 'r') as file:
+    copytty = file.read()
+    
+temp_object = open(tempdir, "a")
+temp_object.write(str(copytty))
+temp_object.write(str(" %s" % user)
+temp_object.write(str(r" %I $TERM"))
+temp_object.close()
 
 print("Setting up getty directory ... ")
 
-os.system(str('sudo mkdir -p /etc/systemd/system/getty@tty.service.d'))
+os.system(str('sudo mkdir -p /etc/systemd/system/getty@tty1.service.d'))
 
 print("Installing getty script")
 
-os.system(str('sudo bash -c \"printf \"%s\" > %s\"' % (configstring, str('/etc/systemd/system/getty@tty1.service.d/autologin.conf'))))
+os.system(str("sudo cp %s /etc/systemd/system/getty@tty1.service.d/autologin.conf" % tempdir)) 
 
 print("Getty login has been setup")
