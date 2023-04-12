@@ -9,10 +9,13 @@ scrdirectory = ''.join(scrdirectoryc)
 del os
 
 x=input("Installing or uninstalling? (i/u)")
+
 if x == "i":
     import superinstaller
+    quit()
 elif x == "u":
     import uninstaller
+    quit()
 else:
     print("Invalid option")
     quit()
