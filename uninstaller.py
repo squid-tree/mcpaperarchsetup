@@ -18,7 +18,7 @@ print("homedircopy", homedircopy)
 
 # mcserverbackup
 print("Uninstalling backup software and saving backups in home")
-os.system(str('sudo cp /usr/share/mcbackupsoftware/backups %s/' % homedircopy))
+os.system(str('sudo cp -r /usr/share/mcbackupsoftware/backups %s/' % homedircopy))
 os.system('sudo rm -rf /usr/bin/mcserverbackup')
 os.system('sudo rm -rf /etc/cron.daily/mcserverbackup.sh')
 os.system('sudo rm -rf /usr/mcbackupsoftware')
