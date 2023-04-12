@@ -1,7 +1,7 @@
 from modules.scripts.config import *
 import os
 
-pwd = ''.join(list(os.path.realpath(os.path.dirname(__file__))).copy()).snip()
+pwd = ''.join(list(os.path.realpath(os.path.dirname(__file__))).copy()).strip()
 
 #creation of temp
 os.system("rm %s/scriptsbackup/temp.txt")
