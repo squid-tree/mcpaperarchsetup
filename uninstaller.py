@@ -1,5 +1,5 @@
+from modules.scripts import projectmodules
 from modules.scripts.config import *
-import modules.scripts.projectmodules
 import copy
 
 if os.geteuid() == 0:

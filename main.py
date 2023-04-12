@@ -1,5 +1,4 @@
 import getpass
-import modules.scripts.projectmodules
 userc = list(getpass.getuser()).copy()
 user = ''.join(userc)
 
