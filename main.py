@@ -4,6 +4,10 @@
 # Set Getty Up
 # Install Dependencies
 # Install server 
+import getpass
+
+userc = getpass.getuser().list().copy()
+user = ''.join(userc)
 print("Welcome")
 print("This script will set up your minecraft server")
 print("It will set up ufw (firewall), ssh for the current user, autologin, any dependencies, backup software and install the server")

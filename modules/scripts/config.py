@@ -2,7 +2,7 @@
 import os
 import getpass
 from modules.scripts.startmcservice import *
-user = getpass.getuser()
+from main import user
 jarlink = 'https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/504/downloads/paper-1.19.4-504.jar' # Link to the paper version that will be used
 jarversion = 'paper-1.19.4-504.jar' # Jar version, write exact name
 homedirectory = str('/home/%s' % user)
