@@ -101,6 +101,7 @@ if projectmodules.confirminput("Install the startmc service?"):
     os.system('sudo sh -c \'echo \"%s\" >> /etc/systemd/system/startmc.service\'' % mcserviceconfig) 
     print("Enabling groups access ...")
     os.system('sudo chgrp -R minecraft /opt/minecraft/mcserver')
+    os.system('sudo chgrp -R minecraft /opt/minecraft/mcserver/\'%s\'' % jarversion)
     print("Giving java access ...")
     os.system('sudo usermod -a -G minecraft jvmapps')
 else:

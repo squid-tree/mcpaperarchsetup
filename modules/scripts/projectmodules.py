@@ -61,4 +61,4 @@ def cleanupinstall():
     os.system('sudo userdel -r minecraft')
     os.system('sudo usermod -r -G minecraft jvmapps')
     os.system('sudo groupdel minecraft')
-
+    quit()
