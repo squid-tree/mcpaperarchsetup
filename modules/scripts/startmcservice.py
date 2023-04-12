@@ -3,7 +3,13 @@ serviceinfo = """
 
 Description=Minecraft Server
 
-After=network.target
+After=systemd-user-sessions.service plymouth-quit-wait.service
+
+After=rc-local.service
+
+Before=getty.target
+
+IgnoreOnIsolate=yes
 
 [Service]
 
