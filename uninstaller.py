@@ -2,7 +2,7 @@ from modules.scripts import projectmodules
 from modules.scripts.config import *
 import copy
 
-if os.geteuid() = 0:
+if os.geteuid() == 0:
     print("ERROR: Cannot be run as root")
     quit()
 
