@@ -12,9 +12,7 @@ print("Please ensure all configs have been filled")
 #    print("Error: user must be called %s, this will cause errors otherwise", user)
 #    quit()
 
-homedirc = list(homedirectory)
-homedirc = homedirc.copy()
-homedirc = ''.join(homedirc)
+homedirc=homedirectory
 
 print('\n')
 print("------Verification------")
