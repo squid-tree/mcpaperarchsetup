@@ -98,10 +98,12 @@ else:
     projectmodules.cleanupinstall()
     projectmodules.cleanupbuild()
 
-if projectmodules.confirminput("Enable startmc service?"):
+if projectmodules.confirminput("Enable startmc service and it's java component?"):
     print("Enabling startmc.service ...")
     os.system('sudo systemctl daemon-reload')
     os.system('sudo systemctl enable startmc.service')
+    os.system('sudo systemctl start startmc.service')
+    os.system('sudo systemctl stop startmc.service')
 else:
     projectmodules.cleanupinstall()
     projectmodules.cleanupbuild()
