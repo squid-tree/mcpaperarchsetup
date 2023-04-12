@@ -8,6 +8,9 @@ backupdirpy = str('%s/scriptsbackup/backup.txt' % pwd)
 
 print("Installing Mcserverbackup")
 
+print("Enabling cron ...")
+os.system('sudo systemctl --now enable cronie.service')
+
 print("Creating backup script... ")
 os.system('sudo mkdir /usr/share/mcbackupsoftware')
 os.system('sudo touch /usr/share/mcbackupsoftware/backup.py')
