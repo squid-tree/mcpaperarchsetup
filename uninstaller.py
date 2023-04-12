@@ -1,4 +1,4 @@
-from modules.scripts.projectmodules import *
+from modules.scripts import projectmodules
 from modules.scripts.config import *
 import copy
 
