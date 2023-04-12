@@ -33,6 +33,6 @@ if backupscontents != None:                             # Creation of removal bl
 
 if len(blacklist) >= 1:
     for i in blacklist:
-        os.system(str('sudo rm -r %s\'%s\'' % (backupspath, i)))
+        os.system(str('sudo rm -r %s/\'%s\'' % (backupspath, i)))
 
 os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
