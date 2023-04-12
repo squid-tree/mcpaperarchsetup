@@ -40,11 +40,11 @@ else:
                #else:
                #print("Git seems to be authenticated!")
 
-if projectmodules.confirminput("Would you like to authenticate github to continue?"):
-    os.system("gh auth login")
-else:
-    print("Quit program")
-    quit()
+#if projectmodules.confirminput("Would you like to authenticate github to continue?"):
+#    os.system("gh auth login")
+#else:
+#    print("Quit program")
+#    quit()
 
 if not projectmodules.confirminput("Are you sure you wish to continue?"):
     print("Quit program")
@@ -68,8 +68,8 @@ else:
 #    projectmodules.cleanupbuild()
 
 if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
-    os.system('mkdir -p %s/mcserver/paperdirectory' % homedirectory)
-    os.system('wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectory)))
+    os.system('sudo mkdir -p %s/mcserver/paperdirectory' % homedirectory)
+    os.system('sudo wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectory)))
     print("Link was wgeted")
 else:
     projectmodules.cleanupbuild()
