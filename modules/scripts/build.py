@@ -72,7 +72,7 @@ else:
 
 if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
     os.system('mkdir --parents %s/mcserver/paperdirectory' % homedirectoryc)
-    os.system('sudo wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectoryc)))
+    os.system('wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectoryc)))
     print("Link was wgeted")
 else:
     projectmodules.cleanupbuild()
