@@ -7,8 +7,8 @@ pwd = ''.join(list(os.path.realpath(os.path.dirname(__file__))).copy()).strip()
 ttydir=str("%s/scriptsbackup/tty.txt" % pwd)
 tempdir=str("%s/scriptsbackup/temp.txt" % pwd)
 
-os.system(str("rm %s" % tempdir)
-os.system(str("touch %s" % tempdir)
+os.system(str("rm %s" % tempdir))
+os.system(str("touch %s" % tempdir))
 
 # Taking of tty.txt and writing to temp
 with open(ttydir, 'r') as file:
