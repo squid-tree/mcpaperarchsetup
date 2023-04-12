@@ -2,6 +2,8 @@ import os
 import subprocess
 from modules.scripts.config import *
 
+homedirectory = homedirectory
+
 def configchecker():
     tests = [None] * 4
     # Check jar link
