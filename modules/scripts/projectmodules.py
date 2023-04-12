@@ -51,13 +51,14 @@ def cleanupbuild():
 
 def cleanupinstall():
     print("Removing users and user settings related ...")
-    os.system('sudo killall -u minecraft')
-    os.system('sudo userdel -r minecraft')
-    os.system('sudo usermod -r -G minecraft jvmapps')
-    os.system('sudo groupdel minecraft')
     print("Uninstalling server from it's directory")
     os.system('sudo rm -rf /opt/minecraft/mcserver')
     print("Removing startmc service")
     os.system('sudo systemctl stop startmc.service')
     os.system('sudo systemctl disable startmc.service')
     os.system('sudo rm /etc/systemd/system/startmc.service')
+    os.system('sudo killall -u minecraft')
+    os.system('sudo userdel -r minecraft')
+    os.system('sudo usermod -r -G minecraft jvmapps')
+    os.system('sudo groupdel minecraft')
+
