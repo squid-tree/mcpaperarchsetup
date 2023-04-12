@@ -23,7 +23,7 @@ PrivateDevices=true
 
 NoNewPrivileges=true
 
-WorkingDirectory=/opt/minecraft
+WorkingDirectory=/opt/minecraft/mcserver
 
 ExecStart=java -Xmx%sG -Xms%sG -jar /opt/minecraft/mcserver/paperdirectory/%s --nogui
 
