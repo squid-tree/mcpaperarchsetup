@@ -45,6 +45,7 @@ def confirminput(s):
 
 def cleanupbuild():
     print("Cleaning Build:")
+    os.system('sudo killall -u minecraft')
     os.system('sudo userdel -r minecraft')
     os.system('rm -r %s/mcserver' % homedirectory)
     print("Build was cleaned succesfully")
