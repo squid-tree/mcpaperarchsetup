@@ -14,7 +14,7 @@ ram = str(2) # Ram to be used, in GB
 scrdirectoryc = list(os.path.dirname(os.path.realpath(__file__))).copy()
 scrdirectory = ''.join(scrdirectoryc)
 cuser = list(open(str('%s/user.txt' % scrdirectory)).read()).copy()
-user = ''.join(cuser)
+user = ''.join(cuser).strip()
 homedirectory = str('/home/%s' % user)
 mcserviceconfig = str(serviceinfo % (ram, ram, jarversion))
 ##
