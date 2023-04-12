@@ -15,6 +15,7 @@ print("Creating backup script... ")
 os.system('sudo mkdir /usr/share/mcbackupsoftware')
 os.system('sudo touch /usr/share/mcbackupsoftware/backup.py')
 os.system(str('sudo cp %s /usr/share/mcbackupsoftware/backup.py' % backupdirpy))
+os.system('sudo chmod +x /usr/share/mcbackupsoftware/backup.py')
 
 print("Setting script up to run daily ...")
 backupbscr="""#!/bin/bash
