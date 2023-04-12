@@ -28,3 +28,7 @@ from modules import sshsetup
 from modules import installer
 from modules import saveinstall
 from modules import mcserverbackup
+
+print("\n\n\n\n\n\n")
+print("ALL DONE!!!!")
+print("For your next steps: agree to the eula, configure the server and reboot!")
