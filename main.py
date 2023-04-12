@@ -9,6 +9,10 @@ print("This script will set up your minecraft server")
 print("It will set up ufw (firewall), ssh for the current user, autologin, any dependencies, backup software and install the server")
 print("\n")
 
+if os.geteuid() = 0:
+    print("ERROR: Cannot be run as root")
+    quit()
+
 if input("HAVE YOU FILLED OUT THE CONFIG (y/n)") != 'y':
     quit()
 if input("DOUBLE CONFIRM, type fully (yes/no)") != 'yes':

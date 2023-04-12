@@ -11,6 +11,11 @@ print("Please ensure all configs have been filled")
 #if os.getlogin() != str('%s' % user):
 #    print("Error: user must be called %s, this will cause errors otherwise", user)
 #    quit()
+
+homedirc = list(homedirectory)
+homedirc = homedirc.copy()
+homedirc = ''.join(homedirc)
+
 print('\n')
 print("------Verification------")
 
@@ -68,8 +73,8 @@ else:
 #    projectmodules.cleanupbuild()
 
 if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
-    os.system('sudo mkdir -p %s/mcserver/paperdirectory' % homedirectory)
-    os.system('sudo wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectory)))
+    os.system('sudo mkdir -p %s/mcserver/paperdirectory' % homedirectoryc)
+    os.system('sudo wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectoryc)))
     print("Link was wgeted")
 else:
     projectmodules.cleanupbuild()
@@ -81,7 +86,7 @@ if not projectmodules.confirminput("This is now the installation stage, where th
 
 if projectmodules.confirminput("Install mcserver to it's directory?"):
     print("Installing mcserver ...")
-    projectmodules.os.system('sudo cp -r %s/mcserver /opt/minecraft/' % homedirectory)
+    projectmodules.os.system('sudo cp -r %s/mcserver /opt/minecraft/' % homedirectoryc)
 else:
     projectmodules.cleanupbuild()
 
