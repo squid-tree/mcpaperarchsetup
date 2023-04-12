@@ -12,7 +12,7 @@ print("Please ensure all configs have been filled")
 #    print("Error: user must be called %s, this will cause errors otherwise", user)
 #    quit()
 
-homedirc=homedirectory
+homedirectoryc=homedirectory
 
 print('\n')
 print("------Verification------")
