@@ -71,17 +71,11 @@ else:
 #    projectmodules.cleanupbuild()
 
 if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
-    if projectmodules.confirminput('Make wget directory?'):
-        print('%s' % homedirectory)
-        print(str('%s/mcserver/paperdirectory' % homedirectory))
-        os.system(str('mkdir -p %s/mcserver/paperdirectory' % homedirectory))
-        os.system("ls /home/rosa | grep mc")
-    else:
-        quit()
-    if projectmodules.confirminput('Do the wget?'):
-        os.system(str('wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectory))))
-    else:
-        quit()
+    print('%s' % homedirectory)
+    print(str('%s/mcserver/paperdirectory' % homedirectory))
+    os.system(str('mkdir -p %s/mcserver/paperdirectory' % homedirectory))
+    os.system("ls /home/rosa | grep mc")
+    os.system(str('wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectory))))
     print("Link was wgeted")
 else:
     projectmodules.cleanupbuild()
