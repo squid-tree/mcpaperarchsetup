@@ -11,7 +11,7 @@ if not projectmodules.confirminput("Would you like to continue?"):
     print("Quiting program ...")
     quit()
 
-usercopy = list(user)
+usercopy = list(os.getlogin())
 usercopy = usercopy.copy()
 usercopy = ''.join(usercopy)
 homedircopy = str('/home/%s' % usercopy)
