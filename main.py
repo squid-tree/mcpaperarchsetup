@@ -6,6 +6,9 @@ del getpass
 import os 
 scrdirectoryc = list(os.path.dirname(os.path.realpath(__file__))).copy()
 scrdirectory = ''.join(scrdirectoryc)
+
+os.system(str("echo %s > %s/modules/scripts/user.txt" % (user, scrdirectory)))
+
 del os
 
 x=input("Installing or uninstalling? (i/u)")
