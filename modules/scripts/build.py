@@ -71,8 +71,8 @@ else:
 #    projectmodules.cleanupbuild()
 
 if projectmodules.confirminput('Wget this jar link? (Y/n): %s ' % jarlink):
-    os.system(str('mkdir --parents %s/mcserver/paperdirectory' % homedirectoryc))
-    os.system(str('wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectoryc))))
+    os.system(str('mkdir --parents %s/mcserver/paperdirectory' % homedirectory))
+    os.system(str('wget %s -P %s' % (jarlink, str('%s/mcserver/paperdirectory' % homedirectory))))
     print("Link was wgeted")
 else:
     projectmodules.cleanupbuild()
@@ -84,7 +84,7 @@ if not projectmodules.confirminput("This is now the installation stage, where th
 
 if projectmodules.confirminput("Install mcserver to it's directory?"):
     print("Installing mcserver ...")
-    projectmodules.os.system(str('sudo cp -r %s/mcserver /opt/minecraft/' % homedirectoryc))
+    projectmodules.os.system(str('sudo cp -r %s/mcserver /opt/minecraft/' % homedirectory))
 else:
     projectmodules.cleanupbuild()
 
