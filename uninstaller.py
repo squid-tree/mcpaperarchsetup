@@ -1,6 +1,5 @@
 from modules.scripts import projectmodules
 from modules.scripts.config import *
-import copy
 
 if os.geteuid() == 0:
     print("ERROR: Cannot be run as root")
@@ -22,7 +21,7 @@ os.system('sudo rm -rf /usr/mcbackupsoftware')
 
 # saveinstall
 print("Uninstalling the mcserverinstaller script from home")
-os.system(str('sudo rm -rf %s/mcserverinstaller' % homedircopy))
+os.system(str('rm -rf %s/mcserverinstaller' % homedircopy))
 
 # Install script 
 print("Uninstalling mcserver, most recent backup will be saved to backupsmc in home")
