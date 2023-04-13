@@ -19,7 +19,7 @@ os.system(str('sudo cp %s /usr/share/mcbackupsoftware/backup.py' % backupdirpy))
 print("Setting script up to run daily ...")
 os.system('sudo touch /usr/share/mcbackupsoftware/mcserverbackup.sh')
 #os.system(str('sudo bash -c \'printf \"%%s\" \"%s\" > /usr/share/mcbackupsoftware/mcserverbackup.sh\'' % backupbscr))
-os.system('sudo cp %s/scriptsbackup/shellbackup.txt /usr/share/mcbackupsoftware/mcserverbackup.sh'
+os.system(str('sudo cp %s/scriptsbackup/shellbackup.txt /usr/share/mcbackupsoftware/mcserverbackup.sh' % pwd ))
 os.system('sudo chmod +x /usr/share/mcbackupsoftware/mcserverbackup.sh')
 os.system(str('sudo ln -sf /usr/share/mcbackupsoftware/mcserverbackup.sh /etc/cron.daily/mcserverbackup.sh'))
 
