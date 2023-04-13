@@ -1,4 +1,5 @@
 import os
+import time
 import re
 import subprocess
 from datetime import datetime
@@ -15,6 +16,8 @@ def sortervalue(e):
     return result
 
 def doer():
+    os.system('systemctl stop startmc')
+    time.wait(10)
     timedate = datetime.now().strftime('%c')
 
     backupspath = str('/usr/share/mcbackupsoftware/backups')
@@ -38,14 +41,18 @@ def doer():
             os.system(str('sudo rm -r %s/\'%s\'' % (backupspath, i)))
 
     os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
+    os.system('systemctl start startmc')
 
 def doersmall(directory):
+    os.system('systemctl stop startmc')
+    time.wait(10)
     timedate = datetime.now().strftime('%c')
 
     backupspath = directory
     newbackuppath = str("%s/\'%s\'" % (backupspath, timedate))
     
     os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
+    os.system("systemctl start startmc")
 
 if len(sys.argv) == 3 and sys.argv[1] == "--directory":
     if os.path.exists(sys.argv[2]):
