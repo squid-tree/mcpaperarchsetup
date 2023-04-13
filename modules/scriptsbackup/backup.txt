@@ -62,6 +62,13 @@ elif len(sys.argv) == 2:
 elif len(sys.argv) == 1:
     doer()
     quit()
+elif len(sys.argv) == 3:
+    print("(DEBUG) a number of inputs that was 3 but not dir")
+    print("Available options:")
+    print("--directory [desired location] - Make a backup in a desired directory")
+    print("--help - list options")
+    print("No parameters - Will save a backup in it's default directory")
+    quit()
 else:
     print("(DEBUG) a number of inputs that wasn't 2 and was invalid")
     print("Available options:")
