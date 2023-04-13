@@ -60,6 +60,7 @@ elif len(sys.argv) == 3 and sys.argv[2] == "--directory":
 elif len(sys.argv) == 1:
     doer()
 else:
+    print("(DEBUG) a number of inputs that wasn't 2 and was invalid")
     print("Available options:")
     print("--directory [desired location] - Make a backup in a desired directory")
     print("--help - list options")
