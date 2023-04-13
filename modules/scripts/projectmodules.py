@@ -64,4 +64,5 @@ def cleanupinstall():
     os.system('sudo usermod -r -G minecraft jvmapps')
     os.system('sudo userdel --force -r minecraft') 
     os.system('sudo groupdel minecraft')
+    os.system('sudo rm -rf /opt/minecraft/mcserver')
     quit()
