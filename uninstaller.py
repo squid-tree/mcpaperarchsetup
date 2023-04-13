@@ -1,6 +1,9 @@
 from modules.scripts import projectmodules
 from modules.scripts.config import *
 
+scrdirectoryc = list(os.path.dirname(os.path.realpath(__file__))).copy()
+scrdirectory1 = ''.join(scrdirectoryc)
+
 if os.geteuid() == 0:
     print("ERROR: Cannot be run as root")
     quit()
@@ -26,5 +29,10 @@ os.system(str('rm -rf %s/mcserverinstaller' % homedircopy))
 # Install script 
 print("Uninstalling mcserver, most recent backup will be saved to backupsmc in home")
 from modules.scripts import uninstall
+
+print("Removing temp files")
+os.system(str("sudo rm %s/modules/scripts/user.txt" % scrdirectory1))
+os.system(str("sudo rm %s/modules/scriptsbackup/temp.txt" % scrdirectory1))
+os.system(str("sudo rm %s/modules/scripts/rcpassword.txt" % scrdirectory1))
 
 print("Everything uninstalled! Dependencies and services have been left as is, besides startmc.service which was deleted and disabled")

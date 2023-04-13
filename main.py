@@ -28,9 +28,11 @@ if x == "i":
 
     exec(open(str("%s/superinstaller.py" % scrdirectory)).read())
     print("Cleaning temp files")
+    import os
     os.system(str("sudo rm %s/modules/scripts/user.txt" % scrdirectory))
     os.system(str("sudo rm %s/modules/scriptsbackup/temp.txt" % scrdirectory))
     os.system(str("sudo rm %s/modules/scripts/rcpassword.txt" % scrdirectory))
+    del os
     quit()
 elif x == "u":
     exec(open(str("%s/uninstaller.py" % scrdirectory)).read())
