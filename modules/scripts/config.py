@@ -19,5 +19,5 @@ user = ''.join(cuser).strip()
 homedirectory = str('/home/%s' % user)
 if os.path.exists(str('%s/rcpassword.txt' % scrdirectory)):
     rcpassword = open(str('%s/rcpassword.txt' % scrdirectory)).read().strip()
-mcserviceconfig = str(serviceinfo % (ram, ramtype, ram, ramtype, jarversion, rcpassword))
+    mcserviceconfig = str(serviceinfo % (ram, ramtype, ram, ramtype, jarversion, rcpassword))
 ##
