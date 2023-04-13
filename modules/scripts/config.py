@@ -17,6 +17,6 @@ scrdirectory = ''.join(scrdirectoryc)
 cuser = list(open(str('%s/user.txt' % scrdirectory)).read()).copy()
 user = ''.join(cuser).strip()
 homedirectory = str('/home/%s' % user)
-rcpassword = open(str('%s/rcpassword.txt')).read().strip()
+rcpassword = open(str('%s/rcpassword.txt' % scrdirectory)).read().strip()
 mcserviceconfig = str(serviceinfo % (ram, ramtype, ram, ramtype, jarversion, rcpassword))
 ##
