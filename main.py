@@ -5,8 +5,8 @@ scrdirectoryc = list(os.path.dirname(os.path.realpath(__file__))).copy()
 scrdirectory = ''.join(scrdirectoryc)
 
 #setting mcrcon password
-passwordtemp = input("Enter desired mcrcon password")
-if input("Confirm mcrcon password") != passwordtemp:
+passwordtemp = input("Enter desired mcrcon password: ")
+if input("Confirm mcrcon password: ") != passwordtemp:
     quit()
 else:
     os.system(str("echo %s > %s/modules/scripts/rcpassword.txt" % (passwordtemp, scrdirectory)))
