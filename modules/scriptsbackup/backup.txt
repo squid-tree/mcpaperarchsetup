@@ -53,7 +53,7 @@ if len(sys.argv) == 2:
     print("--help - list options")
     print("No parameters - Will save a backup in it's default directory")
 elif len(sys.argv) == 3 and sys.argv[2] == "--directory":
-    if os.path.isfile(sys.argv[3]):
+    if os.paths.exists(sys.argv[3]):
         doersmall(sys.argv[3])
     else:
         print("That directory doesn't exist, make it!")
