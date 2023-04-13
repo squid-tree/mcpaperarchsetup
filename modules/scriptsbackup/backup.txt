@@ -53,6 +53,8 @@ if len(sys.argv) == 3 and sys.argv[2] == "--directory":
     else:
         print("That directory doesn't exist, make it!")
     quit()
+elif len(sys.argv) == 3 and sys.argv[2] == "tester":
+    print("DEBUG: tester")
 elif len(sys.argv) == 2:
     print("Available options:")
     print("--directory [desired location] - Make a backup in a desired directory")
