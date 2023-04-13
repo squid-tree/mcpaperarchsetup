@@ -60,7 +60,7 @@ def cleanupinstall():
     os.system('sudo rm /etc/systemd/system/startmc.service')
     os.system('sudo killall -u minecraft')
     os.system('sudo killall -u jvmapps')
-    time.sleep(0.5)
+    time.sleep(2.0)
     os.system('sudo userdel -r minecraft')
     os.system('sudo usermod -r -G minecraft jvmapps')
     os.system('sudo groupdel minecraft')
