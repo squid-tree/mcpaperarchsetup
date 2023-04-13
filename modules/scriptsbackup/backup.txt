@@ -17,7 +17,7 @@ def sortervalue(e):
 
 def doer():
     os.system('systemctl stop startmc')
-    time.wait(10)
+    time.sleep(10)
     timedate = datetime.now().strftime('%c')
 
     backupspath = str('/usr/share/mcbackupsoftware/backups')
@@ -45,7 +45,7 @@ def doer():
 
 def doersmall(directory):
     os.system('systemctl stop startmc')
-    time.wait(10)
+    time.sleep(10)
     timedate = datetime.now().strftime('%c')
 
     backupspath = directory
