@@ -14,7 +14,8 @@ os.system(str("touch %s" % tempdir))
 with open(storagedir, 'r') as file:
     copytty = file.read().strip()
 
-copytty.splitlines()
+coppytty = copytty.splitlines()
+
 copytty[42] = str('rcon.password=%s' % rcpassword)
 copytty[12] = str('enable-rcon=true')
 copytty='\n'.join(copytty)
