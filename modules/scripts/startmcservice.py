@@ -25,7 +25,9 @@ NoNewPrivileges=true
 
 WorkingDirectory=/opt/minecraft/mcserver
 
-ExecStart=java -Xmx%sG -Xms%sG -jar /opt/minecraft/mcserver/paperdirectory/%s nogui
+ExecStart=java -Xmx%s%s -Xms%s%s -jar /opt/minecraft/mcserver/paperdirectory/%s nogui
+
+ExecStop=mcrcon -H 127.0.0.1 -P 25575 -p %s stop
 
 [Install]
 

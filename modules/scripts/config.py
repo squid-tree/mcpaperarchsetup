@@ -8,6 +8,7 @@ jarlink = 'https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/504/d
 jarversion = 'paper-1.19.4-504.jar' # Jar version, write exact name
 dependencies = ['git', 'github-cli']
 ram = str(2) # Ram to be used, in GB
+ramtype = str("G")
 #ghserverurl = str() # Gh repo for server
 
 ##Don't touch
@@ -16,5 +17,6 @@ scrdirectory = ''.join(scrdirectoryc)
 cuser = list(open(str('%s/user.txt' % scrdirectory)).read()).copy()
 user = ''.join(cuser).strip()
 homedirectory = str('/home/%s' % user)
-mcserviceconfig = str(serviceinfo % (ram, ram, jarversion))
+rcpassword = open(str('%s/rcpassword.txt')).read().strip()
+mcserviceconfig = str(serviceinfo % (ram, ramtype, ram, ramtype, jarversion, rcpassword))
 ##
