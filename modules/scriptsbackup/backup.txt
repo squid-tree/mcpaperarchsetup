@@ -47,9 +47,9 @@ def doersmall(directory):
     
     os.system("sudo cp -r /opt/minecraft/ %s" % newbackuppath)
 
-if len(sys.argv) == 2 and sys.argv[1] == "--directory":
-    if os.paths.exists(sys.argv[2]):
-        doersmall(sys.argv[2])
+if len(sys.argv) == 3 and sys.argv[2] == "--directory":
+    if os.paths.exists(sys.argv[3]):
+        doersmall(sys.argv[3])
     else:
         print("That directory doesn't exist, make it!")
 elif len(sys.argv) == 2:
