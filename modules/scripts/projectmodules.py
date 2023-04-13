@@ -1,5 +1,6 @@
 import os
 import subprocess
+import time
 from modules.scripts.config import *
 
 homedirectory = homedirectory
@@ -59,6 +60,7 @@ def cleanupinstall():
     os.system('sudo rm /etc/systemd/system/startmc.service')
     os.system('sudo killall -u minecraft')
     os.system('sudo killall -u jvmapps')
+    time.sleep(0.5)
     os.system('sudo userdel -r minecraft')
     os.system('sudo usermod -r -G minecraft jvmapps')
     os.system('sudo groupdel minecraft')
