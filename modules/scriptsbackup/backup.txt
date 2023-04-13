@@ -52,7 +52,7 @@ if len(sys.argv) == 2:
     print("--directory [desired location] - Make a backup in a desired directory")
     print("--help - list options")
     print("No parameters - Will save a backup in it's default directory")
-elif len(sys.argv) == 3 and sys.argv[2] == "--directory"
+elif len(sys.argv) == 3 and sys.argv[2] == "--directory":
     if os.path.isfile(sys.argv[3]):
         doersmall(sys.argv[3])
     else:
