@@ -27,7 +27,7 @@ def doer():
     backupscontents.sort(key=sortervalue) # Youngest last!
 
     while("" in backupscontents):
-    backupscontents.remove("")
+    	backupscontents.remove("")
 
     if backupscontents != None:                             # Creation of removal blacklist
         for i in range(len(backupscontents) - 4):
