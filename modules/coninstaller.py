@@ -9,6 +9,6 @@ scriptstorage='/usr/share/mcconsole/console.sh'
 binary = '/usr/bin/mcconsole'
 
 os.system(str('sudo mkdir --parents %s' % storage))
-os.system(str('sudo cp %s %s' (recipient, storage)))
-os.system(str('sudo cp %s %s' (script, storage)))
-os.systek(str('sudo ln -sf %s %s' % (scriptstorage,binary)))
+os.system(str('sudo cp %s %s' % (recipient, storage)))
+os.system(str('sudo cp %s %s' % (script, storage)))
+os.system(str('sudo ln -sf %s %s' % (scriptstorage,binary)))
