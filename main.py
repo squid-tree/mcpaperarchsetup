@@ -26,7 +26,7 @@ if x == "i":
         print("Mcrcon password set!")
     del os
 
-    exec(open(str("%s/superinstaller.py" % scrdirectory)).read())
+    exec(open(str("%s/modules/superinstaller.py" % scrdirectory)).read())
     print("Cleaning temp files")
     import os
     os.system(str("sudo rm %s/modules/scripts/user.txt" % scrdirectory))
@@ -35,7 +35,7 @@ if x == "i":
     del os
     quit()
 elif x == "u":
-    exec(open(str("%s/uninstaller.py" % scrdirectory)).read())
+    exec(open(str("%s/modules/uninstaller.py" % scrdirectory)).read())
     quit()
 else:
     print("Invalid option")
