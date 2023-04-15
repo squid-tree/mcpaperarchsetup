@@ -124,5 +124,8 @@ else:
     projectmodules.cleanupinstall()
     projectmodules.cleanupbuild()
 
+print("Removing built mcserver directory at home")
+os.system(str('sudo rm -rf %s/mcserver' % homedirectory))
+
 print('\n')
 print('All done! The server will start upon reboot, or if you would like to start the server now, execute the command: systemctl start startmc.service')
