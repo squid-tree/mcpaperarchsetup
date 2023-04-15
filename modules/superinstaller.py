@@ -28,6 +28,7 @@ from modules import sshsetup
 from modules import installer
 from modules import mcserverbackup
 from modules import configadder
+from modules import coninstaller
 
 print("\n\n\n\n\n\n")
 print("ALL DONE!!!!")
