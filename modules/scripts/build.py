@@ -31,9 +31,9 @@ else:
 #    print("There is a dependancy missing, do you have the following dependencies?")
 #    print(dependencies)
 #    quit()
-else:
-    print('All dependencies seem to be installed, make sure by checking below')
-    print(dependencies)
+#else:
+#print('All dependencies seem to be installed, make sure by checking below')
+##print(dependencies)
 
 #gitstatus = str(subprocess.Popen(['gh', 'auth', 'status']))
 #print("What gitstatus says: %s" % gitstatus)
