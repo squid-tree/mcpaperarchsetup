@@ -1,5 +1,6 @@
 from modules.scripts import projectmodules
 from modules.scripts.config import *
+import time
 
 scrdirectoryc = list(os.path.dirname(os.path.realpath(__file__))).copy()
 scrdirectory1 = ''.join(scrdirectoryc)
@@ -14,6 +15,10 @@ print("UNINSTALLER \n")
 if not projectmodules.confirminput("Would you like to continue?"):
     print("Quiting program ...")
     quit()
+
+print("Stopping mcserver ...")
+os.system("sudo systemctl stop startmc")
+time.sleep(4)
 
 # mcserverbackup
 print("Uninstalling backup software and saving backups in home")
@@ -34,5 +39,9 @@ print("Removing temp files")
 os.system(str("sudo rm %s/modules/scripts/user.txt" % scrdirectory1))
 os.system(str("sudo rm %s/modules/scriptsbackup/temp.txt" % scrdirectory1))
 os.system(str("sudo rm %s/modules/scripts/rcpassword.txt" % scrdirectory1))
+
+print("Uninstalling mcconsole")
+os.system('sudo rm /usr/bin/mcconsole')
+os.system('sudo rm -rf /usr/share/mcconsole')
 
 print("Everything uninstalled! Dependencies and services have been left as is, besides startmc.service which was deleted and disabled")
