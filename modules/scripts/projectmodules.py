@@ -48,7 +48,6 @@ def cleanupbuild():
     print("Cleaning Build:")
     os.system('rm -r %s/mcserver' % homedirectory)
     print("Build was cleaned succesfully")
-    quit()
 
 def cleanupinstall():
     print("Removing users and user settings related ...")
@@ -65,4 +64,3 @@ def cleanupinstall():
     os.system('sudo userdel --force -r minecraft') 
     os.system('sudo groupdel minecraft')
     os.system('sudo rm -rf /opt/minecraft/mcserver')
-    quit()
